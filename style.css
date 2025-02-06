@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* reset */
+
+body, h1, h2, h3, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  line-height: normal;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* common */
+
+body {
+  writing-mode: vertical-rl;
+}
