@@ -1,0 +1,67 @@
+//- ---
+//- dynamicPermalink: false
+//- permalink: 'xx.html'
+//- ---
+
+extends /_layout-default
+
+prepend config-block
+  - site.page_name = '創作'
+  //- - site.description = ''
+  //- - site.keywords = ''
+  //- - site.url = ''
+  //- - site.ogp_type = 'article'
+
+//- append stylesheet-block
+//-   link(rel="stylesheet", href="/assets/styles/page.css")
+
+//- append javascript-block
+//-   script(src="/assets/scripts/page.js")
+
+block content-block
+  include /_header
+
+  main.l-main
+    section
+      a(href='index.html' target='_blank') オンラインストアを見る
+    section(id='#news')
+      p News
+      h2 お知らせ
+      ul
+        li
+          time(datetime='2021-01-01') 2021.01.01
+          p タイトルタイトルタイトルタイトル
+        li
+          time(datetime='2021-01-01') 2021.01.01
+          p タイトルタイトルタイトルタイトル
+        li
+          time(datetime='2021-01-01') 2021.01.01
+          p タイトルタイトルタイトルタイトル
+        li
+          time(datetime='2021-01-01') 2021.01.01
+          p タイトルタイトルタイトルタイトル
+        li
+          time(datetime='2021-01-01') 2021.01.01
+          p タイトルタイトルタイトルタイトル
+    section(id='#product')
+      h2 商品のご紹介
+      div
+        h3 新しい価値の想像
+        img(src='/assets/images/products1.jpg' alt='商品の写真' width='450' height='300')
+        div
+          p
+            | テキストテキスト
+            br
+            | テキストテキスト
+      div
+        h3 科学と技術の調和
+        img(src='/assets/images/products2.jpg' alt='商品の写真' width='450' height='300')
+        div
+          p
+            | テキストテキスト
+            br
+            | テキストテキスト
+    section#store
+      iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6483.366329297049!2d139.735061!3d35.660177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1738802942563!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+
+  include /_footer
