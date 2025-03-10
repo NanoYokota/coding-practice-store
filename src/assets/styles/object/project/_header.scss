@@ -2,6 +2,25 @@
 @use 'sass:math';
 
 .p-header {
+  width: 100%;
+  padding: 20px;
+
+  position: absolute;
+
+  &__logo {
+    width: 40px;
+  }
+
+  &__nav {
+    margin-right: 60px;
+  }
+
+  &__navItem {
+    + .p-header__navItem {
+      margin-right: 25px;
+    }
+  }
+
   @include mq-up(md) {
   }
 }

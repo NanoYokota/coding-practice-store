@@ -28,11 +28,16 @@ $color-youtube: #ff0000 !default;
 // $pjc-gs-02: #----- !default;
 // $pjc-gs-03: #----- !default;
 
-$pjc-txt-base: #333 !default;
+$pjc-txt-base: #000 !default;
+$pjc-txt-white: #fff !default;
+
+$pjc-border-base: #ccc !default;
+
+$pjc-background-base: #e6e2d7 !default;
 
 // Font Family
 // ---------------------------------------------
-$font-family-base: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif !default;
+$font-family-base: 'Noto Serif JP', serif !default;
 // $font-family-en: 'Roboto', "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif !default;
 
 // Line Height
@@ -53,6 +58,14 @@ $font-family-base: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-se
 // $font-weight-bold: 700;
 // $font-weight-exBold: 800;
 // $font-weight-black: 900;
+
+// Font Size
+// ---------------------------------------------
+$font-size-xs: 12px !default;
+$font-size-s: 14px !default;
+$font-size-m: 16px !default;
+$font-size-l: 24px !default;
+$font-size-xl: 28px !default;
 
 // Layers z-index
 // ---------------------------------------------r.
