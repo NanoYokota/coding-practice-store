@@ -6,7 +6,7 @@
 extends /_layout-default
 
 prepend config-block
-  - site.page_name = '創作'
+  //- - site.page_name = '創作'
   //- - site.description = ''
   //- - site.keywords = ''
   //- - site.url = ''
@@ -22,29 +22,19 @@ block content-block
   include /_header
 
   main.l-main
-    section
-      a(href='index.html' target='_blank') オンラインストアを見る
-    section(id='#news')
-      p News
-      h2 お知らせ
-      ul
-        li
-          time(datetime='2021-01-01') 2021.01.01
-          p タイトルタイトルタイトルタイトル
-        li
-          time(datetime='2021-01-01') 2021.01.01
-          p タイトルタイトルタイトルタイトル
-        li
-          time(datetime='2021-01-01') 2021.01.01
-          p タイトルタイトルタイトルタイトル
-        li
-          time(datetime='2021-01-01') 2021.01.01
-          p タイトルタイトルタイトルタイトル
-        li
-          time(datetime='2021-01-01') 2021.01.01
-          p タイトルタイトルタイトルタイトル
+    .p-mainVisual.l-verticalWriting.l-blackBackGround
+      .p-mainVisual__button
+        a.p-mainVisual__buttonInner(href='index.html' target='_blank') オンラインストアを見る
+    section.p-news.l-verticalWriting(id='#news')
+      p.c-text--s News
+      h2.c-text--xl お知らせ
+      ul.p-news__contents
+        - for (let i = 0; i < 3; i++)
+          li.p-news__list
+            time.c-text--xs(datetime='2021-01-01') 2021.01.01
+            p タイトルタイトルタイトルタイトル
     section(id='#product')
-      h2 商品のご紹介
+      h2.u-displayNone 商品のご紹介
       div
         h3 新しい価値の想像
         img(src='/assets/images/products1.jpg' alt='商品の写真' width='450' height='300')

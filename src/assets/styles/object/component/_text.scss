@@ -1,0 +1,23 @@
+@use '../../global' as *;
+
+.c-text {
+  &--xs {
+    font-size: $font-size-xs;
+  }
+
+  &--s {
+    font-size: $font-size-s;
+  }
+
+  &--m {
+    font-size: $font-size-m;
+  }
+
+  &--l {
+    font-size: $font-size-l;
+  }
+
+  &--xl {
+    font-size: $font-size-xl;
+  }
+}
