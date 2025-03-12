@@ -48,6 +48,16 @@ module.exports = {
                   // ['postcss-sort-media-queries', { sort: customSort }],
                   'postcss-flexbugs-fixes',
                   ['cssnano', { autoprefixer: false }],
+
+                  // 画像のパスを相対パスに変換
+                  ['postcss-url', {
+                    url: (asset, _, _) => {
+                      if (asset.url.startsWith('/assets/images/')) {
+                        return '../images/' + asset.url.slice('/assets/images/'.length);
+                      }
+                      return asset.url;
+                    }
+                  }],
                 ],
               },
             },
