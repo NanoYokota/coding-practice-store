@@ -25,7 +25,7 @@ block content-block
     .p-mainVisual.l-verticalWriting.l-blackBackGround
       .p-mainVisual__button
         a.p-mainVisual__buttonInner(href='index.html' target='_blank') オンラインストアを見る
-    section.p-news.l-verticalWriting(id='#news')
+    section.p-news.l-verticalWriting.l-contentsArea(id='#news')
       p.c-text--s News
       h2.c-text--xl お知らせ
       ul.p-news__contents
@@ -33,21 +33,23 @@ block content-block
           li.p-news__list
             time.c-text--xs(datetime='2021-01-01') 2021.01.01
             p タイトルタイトルタイトルタイトル
-    section(id='#product')
+    section.p-promotion.l-contentsArea(id='#product')
       h2.u-displayNone 商品のご紹介
-      div
-        h3 新しい価値の想像
-        img(src='/assets/images/products1.jpg' alt='商品の写真' width='450' height='300')
-        div
-          p
+      .p-promotion__container
+        .l-flex
+          img.p-promotion__image(src='/assets/images/products1.jpg' alt='商品の写真' width='450' height='300')
+          h3.c-writing--vertical.c-text--l 新しい価値の想像
+        .p-promotion__texts--yellow
+          p.p-promotion__text.c-horizontalWriting.c-text--s
             | テキストテキスト
             br
             | テキストテキスト
-      div
-        h3 科学と技術の調和
-        img(src='/assets/images/products2.jpg' alt='商品の写真' width='450' height='300')
-        div
-          p
+      .p-promotion__container
+        .l-flex
+          h3.c-writing--vertical.c-text--l 科学と技術の調和
+          img.p-promotion__image--even(src='/assets/images/products2.jpg' alt='商品の写真' width='450' height='300')
+        .p-promotion__texts--red
+          p.p-promotion__text.c-horizontalWriting.c-text--s
             | テキストテキスト
             br
             | テキストテキスト

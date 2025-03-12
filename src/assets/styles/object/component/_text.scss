@@ -21,3 +21,17 @@
     font-size: $font-size-xl;
   }
 }
+
+.c-writing {
+  &--vertical {
+    writing-mode: vertical-rl;
+  }
+
+  &--horizontal {
+    writing-mode: horizontal-tb;
+  }
+}
+
+.c-horizontalWriting {
+  writing-mode: horizontal-tb;
+}
