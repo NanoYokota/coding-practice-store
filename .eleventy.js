@@ -24,6 +24,14 @@ module.exports = function (eleventyConfig) {
         });
       }
 
+      // 絶対パスを相対パスに変換
+      content = content.replace(
+        /(src|href)="\/([^"]+)"/g,
+        (_, p1, p2) => {
+          return `${p1}="./${p2}"`;
+        }
+      );
+
       return prettier.format(content, {
         ...prettierOptions,
         parser: "html",
@@ -50,7 +58,7 @@ module.exports = function (eleventyConfig) {
     ],
     dir: {
       input: 'src',
-      output: 'public',
+      output: 'docs',
       includes: '_template',
       layouts: "_template",
       data: '_data',

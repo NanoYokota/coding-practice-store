@@ -4,43 +4,7 @@ const basePath = path.resolve(__dirname, 'src');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CopyPlugin = require('copy-webpack-plugin');
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const enabledSourceMap = process.env.NODE_ENV !== 'production';
-
-// postcss-sort-media-queries用
-// min-widthの値を取得するヘルパー関数
-const getWidth = (query) => {
-  const match = query.match(/\(min-width:\s*(\d+)px\)/);
-  return match ? parseInt(match[1], 10) : null;
-};
-
-// postcss-sort-media-queries用
-// min-widthの値とnotキーワードの有無に基づいてメディアクエリを比較するモバイルファースト仕様のカスタムソート関数
-// min-widthにscreen以外のprintなどを指定する場合、min-widthのサイズ比較よりprintの要素が優先される仕様があるため、screenとprintを併用利用できるように独自にmin-widthの幅を基準に並び替えするように指定
-const customSort = (a, b) => {
-  const widthA = getWidth(a);
-  const widthB = getWidth(b);
-  const notA = a.indexOf('not') >= 0;
-  const notB = b.indexOf('not') >= 0;
-  // 両方ともnotキーワードが含まれている場合、min-widthの小さい順にソート
-  if (notA && notB) {
-    return widthA - widthB;
-  }
-  // Aだけがnotキーワードを含む場合、Aを先に
-  if (notA) {
-    return -1;
-  }
-  // Bだけがnotキーワードを含む場合、Bを先に
-  if (notB) {
-    return 1;
-  }
-  // 両方ともnotキーワードが含まれていない場合、min-widthの小さい順にソート
-  if (widthA !== Infinity && widthB !== Infinity) {
-    return widthA - widthB;
-  }
-  // min-widthの値がどちらにも含まれていない場合は、デフォルトの順序を保持。
-  return 0;
-};
 
 module.exports = {
   mode: 'production',
@@ -57,7 +21,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'docs'),
   },
   module: {
     rules: [
