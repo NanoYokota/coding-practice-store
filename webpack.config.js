@@ -51,7 +51,7 @@ module.exports = {
 
                   // 画像のパスを相対パスに変換
                   ['postcss-url', {
-                    url: (asset, _, _) => {
+                    url: (asset) => {
                       if (asset.url.startsWith('/assets/images/')) {
                         return '../images/' + asset.url.slice('/assets/images/'.length);
                       }
