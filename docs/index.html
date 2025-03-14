@@ -44,7 +44,7 @@
             <a class="p-mainVisual__buttonInner" href="index.html" target="_blank">オンラインストアを見る</a>
           </div>
         </div>
-        <section class="p-news l-verticalWriting l-contentsArea" id="#news">
+        <section class="p-news l-verticalWriting l-contentsArea" id="news">
           <p class="c-text--s">News</p>
           <h2 class="c-text--xl">お知らせ</h2>
           <ul class="p-news__contents">
@@ -62,7 +62,7 @@
             </li>
           </ul>
         </section>
-        <section class="p-promotion l-contentsArea" id="#product">
+        <section class="p-promotion l-contentsArea" id="product">
           <h2 class="u-displayNone">商品のご紹介</h2>
           <div class="p-promotion__container">
             <div class="l-flex">
@@ -95,7 +95,7 @@
             </div>
           </div>
         </section>
-        <section class="p-map">
+        <section class="p-map" id="store">
           <iframe
             class="p-map__frame"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6483.366329297049!2d139.735061!3d35.660177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1738802942563!5m2!1sja!2sjp"
@@ -108,21 +108,26 @@
           ></iframe>
         </section>
       </main>
-      <footer class="l-footer p-footer">
-        <h1><img src="./assets/images/logo.svg" alt="創作" /></h1>
-        <address>〒１０６-００３２　東京都港区六本木５丁目×××××</address>
-        電話：<a href="tel:03-xxxx-xxxx">０３-ＸＸＸＸ-ＸＸＸＸ</a>
-        <nav>
-          <ul>
-            <li><a href="#news">お知らせ</a></li>
-            <li><a href="#product">商品のご紹介</a></li>
-            <li><a href="#store">店舗のご案内</a></li>
-          </ul>
-        </nav>
-        <div>
-          <a href="index.html" target="_blank">オンラインストアを見る</a><a href="mailto:xxxxx@xxx.xxx">お問い合わせ</a>
+      <footer class="p-footer l-blackBackGround">
+        <div class="p-footer__container c-text--s">
+          <div class="p-footer__actions l-verticalWriting">
+            <a class="p-footer__action" href="index.html" target="_blank">オンラインストアを見る</a
+            ><a class="p-footer__action" href="mailto:xxxxx@xxx.xxx">お問い合わせ</a>
+          </div>
+          <div class="p-footer__info l-verticalWriting">
+            <img class="p-footer__logo" src="./assets/images/logo.svg" alt="創作" />
+            <address class="p-footer__address">〒１０６-００３２　東京都港区六本木５丁目×××××</address>
+            <div class="p-footer__call">電話：<a href="tel:03-xxxx-xxxx">０３-ＸＸＸＸ-ＸＸＸＸ</a></div>
+            <nav class="p-footer__nav">
+              <ul>
+                <li class="p-footer__listItem"><a href="#news">お知らせ</a></li>
+                <li class="p-footer__listItem"><a href="#product">商品のご紹介</a></li>
+                <li class="p-footer__listItem"><a href="#store">店舗のご案内</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <small>© SOUSAKU</small>
+        <small class="p-footer__copy c-text--xxs c-writing--horizontal">© SOUSAKU</small>
       </footer>
     </div>
     <!-- javascript-->

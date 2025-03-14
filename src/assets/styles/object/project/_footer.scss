@@ -2,6 +2,52 @@
 @use 'sass:math';
 
 .p-footer {
+  padding: 40px 20px 30px;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 40px;
+    height: auto;
+  }
+
+  &__address {
+    margin-right: 25px;
+  }
+
+  &__call {
+    margin-right: 6px;
+  }
+
+  &__nav {
+    margin-right: 25px;
+  }
+
+  &__listItem {
+    + .p-footer__listItem {
+      margin-right: 10px;
+    }
+  }
+
+  &__action {
+    padding-bottom: 6px;
+
+    + .p-footer__action {
+      border-top: 0.5px solid $color-white;
+      padding-top: 6px;
+    }
+  }
+
+  &__copy {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
   @include mq-up(md) {
   }
 }

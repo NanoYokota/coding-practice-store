@@ -1,19 +1,20 @@
-footer.l-footer.p-footer
-  h1
-    img(src='/assets/images/logo.svg' alt='創作')
-  address
-    | 〒１０６-００３２　東京都港区六本木５丁目×××××
-  |     電話：
-  a(href='tel:03-xxxx-xxxx') ０３-ＸＸＸＸ-ＸＸＸＸ
-  nav
-    ul
-      li
-        a(href='#news') お知らせ
-      li
-        a(href='#product') 商品のご紹介
-      li
-        a(href='#store') 店舗のご案内
-  div
-    a(href='index.html' target='_blank') オンラインストアを見る
-    a(href='mailto:xxxxx@xxx.xxx') お問い合わせ
-  small © SOUSAKU
+footer.p-footer.l-blackBackGround
+  .p-footer__container.c-text--s
+    .p-footer__actions.l-verticalWriting
+      a.p-footer__action(href='index.html' target='_blank') オンラインストアを見る
+      a.p-footer__action(href='mailto:xxxxx@xxx.xxx') お問い合わせ
+    .p-footer__info.l-verticalWriting
+      img.p-footer__logo(src='/assets/images/logo.svg' alt='創作')
+      address.p-footer__address 〒１０６-００３２　東京都港区六本木５丁目×××××
+      .p-footer__call
+        | 電話：
+        a(href='tel:03-xxxx-xxxx') ０３-ＸＸＸＸ-ＸＸＸＸ
+      nav.p-footer__nav
+        ul
+          li.p-footer__listItem
+            a(href='#news') お知らせ
+          li.p-footer__listItem
+            a(href='#product') 商品のご紹介
+          li.p-footer__listItem
+            a(href='#store') 店舗のご案内
+  small.p-footer__copy.c-text--xxs.c-writing--horizontal © SOUSAKU
