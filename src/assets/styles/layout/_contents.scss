@@ -12,8 +12,16 @@
 .l-contentsArea {
   padding: 0 20px;
   margin-top: 80px;
+
+  @include mq-up(md) {
+    margin-top: 180px;
+  }
 }
 
 .l-flex {
   display: flex;
+}
+
+.l-justifyEnd {
+  justify-content: flex-end;
 }

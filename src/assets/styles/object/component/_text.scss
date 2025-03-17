@@ -1,28 +1,31 @@
 @use '../../global' as *;
 
-.c-text {
-  &--xxs {
-    font-size: $font-size-xxs;
-  }
+.c-sectionTitle {
+  font-size: $font-size-xl-sp;
 
-  &--xs {
-    font-size: $font-size-xs;
+  @include mq-up(md) {
+    font-size: $font-size-xl-pc;
   }
+}
 
-  &--s {
-    font-size: $font-size-s;
+.c-sectionSubTitle {
+  font-size: $font-size-s-sp;
+}
+
+.c-appealText {
+  font-size: $font-size-l-sp;
+
+  @include mq-up(md) {
+    font-size: $font-size-l-pc;
   }
+}
 
-  &--m {
-    font-size: $font-size-m;
-  }
+.c-enAppealText {
+  display: none;
 
-  &--l {
-    font-size: $font-size-l;
-  }
-
-  &--xl {
-    font-size: $font-size-xl;
+  @include mq-up(md) {
+    display: inline;
+    margin-top: 18px;
   }
 }
 

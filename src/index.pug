@@ -26,33 +26,41 @@ block content-block
       .p-mainVisual__button
         a.p-mainVisual__buttonInner(href='index.html' target='_blank') オンラインストアを見る
     section#news.p-news.l-verticalWriting.l-contentsArea
-      p.c-text--s News
-      h2.c-text--xl お知らせ
+      p.c-sectionSubTitle News
+      h2.c-sectionTitle お知らせ
       ul.p-news__contents
-        - for (let i = 0; i < 3; i++)
+        - for (let i = 0; i < 5; i++)
           li.p-news__list
-            time.c-text--xs(datetime='2021-01-01') 2021.01.01
+            time.p-news__time(datetime='2021-01-01') 2021.01.01
             p タイトルタイトルタイトルタイトル
+
     section#product.p-promotion.l-contentsArea
       h2.u-displayNone 商品のご紹介
       .p-promotion__container
-        .l-flex
-          img.p-promotion__image(src='/assets/images/products1.jpg' alt='商品の写真' width='450' height='300')
-          h3.c-writing--vertical.c-text--l 新しい価値の想像
-        .p-promotion__texts--yellow
-          p.p-promotion__text.c-horizontalWriting.c-text--s
-            | テキストテキスト
-            br
-            | テキストテキスト
+        .l-flex.l-justifyEnd
+          .p-promotion__imageWrapper
+            img.p-promotion__image(src='/assets/images/products1.jpg' alt='商品の写真' width='450' height='300')
+            .p-promotion__texts--yellow
+              p.p-promotion__text.c-horizontalWriting
+                | テキストテキスト
+                br
+                | テキストテキスト
+          h3.c-writing--vertical
+            span.c-appealText 新しい価値の想像
+            span.c-enAppealText Create New Value
       .p-promotion__container
         .l-flex
-          h3.c-writing--vertical.c-text--l 科学と技術の調和
-          img.p-promotion__image--even(src='/assets/images/products2.jpg' alt='商品の写真' width='450' height='300')
-        .p-promotion__texts--red
-          p.p-promotion__text.c-horizontalWriting.c-text--s
-            | テキストテキスト
-            br
-            | テキストテキスト
+          h3.c-writing--vertical
+            span.c-appealText 科学と技術の調和
+            span.c-enAppealText Science & Technology
+          .p-promotion__imageWrapper--even
+            img.p-promotion__image(src='/assets/images/products2.jpg' alt='商品の写真' width='450' height='300')
+            .p-promotion__texts--red
+              p.p-promotion__text.c-horizontalWriting
+                | テキストテキスト
+                br
+                | テキストテキスト
+
     section#store.p-map
       iframe.p-map__frame(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6483.366329297049!2d139.735061!3d35.660177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1738802942563!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen loading='lazy' referrerpolicy='no-referrer-when-downgrade')
 

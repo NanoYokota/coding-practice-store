@@ -7,6 +7,10 @@
 
   position: absolute;
 
+  @include mq-up(md) {
+    padding: 60px 80px;
+  }
+
   &__logo {
     width: 40px;
   }
@@ -19,8 +23,5 @@
     + .p-header__navItem {
       margin-right: 25px;
     }
-  }
-
-  @include mq-up(md) {
   }
 }

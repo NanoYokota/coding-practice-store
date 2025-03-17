@@ -4,6 +4,12 @@
 .p-footer {
   padding: 40px 20px 30px;
 
+  font-size: $font-size-s-sp;
+
+  @include mq-up(md) {
+    padding: 80px 30px 30px;
+  }
+
   &__container {
     width: 100%;
     display: flex;
@@ -13,10 +19,18 @@
   &__logo {
     width: 40px;
     height: auto;
+
+    @include mq-up(md) {
+      margin-right: 50px;
+    }
   }
 
   &__address {
     margin-right: 25px;
+
+    @include mq-up(md) {
+      margin-right: 60px;
+    }
   }
 
   &__call {
@@ -25,11 +39,23 @@
 
   &__nav {
     margin-right: 25px;
+
+    @include mq-up(md) {
+      margin-right: 60px;
+    }
   }
 
   &__listItem {
+    @include mq-up(md) {
+      font-size: $font-size-m-pc;
+    }
+
     + .p-footer__listItem {
       margin-right: 10px;
+
+      @include mq-up(md) {
+        margin-right: 25px;
+      }
     }
   }
 
@@ -46,8 +72,7 @@
     display: block;
     width: 100%;
     text-align: center;
-  }
 
-  @include mq-up(md) {
+    font-size: $font-size-xxs-sp;
   }
 }
